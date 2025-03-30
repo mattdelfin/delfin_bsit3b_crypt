@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg, #5f5ffe, #c7d8f9);
+    background-size: cover;
+    min-height: 100vh;
+    color: #fff;
+}
+
+.container{
+    background-color: rgb(rgb(255, 255, 255,0.5));
+    width: 100%;
+    height: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    border-radius: 10px;
+
+}
+
+body::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1%);
+}
+
+header{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1{
+    font-size: 40px;
+    color: rgb(255, 238, 0);
+    letter-spacing: 0.2em;
+}
+
+/* 
+p{
+    font-size: 25px;
+    color: #fff1a2;
+    text-shadow: 0 0 10px #FFD700;
+} */
+
+.input-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+textarea, input[type=number]{
+    width: 100%;
+    max-width: 400px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    padding: 15px;
+    font-size: 20px;
+    background: rgb(255, 255, 255, 0.5);
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+
+}
+button{
+    margin: 20px;
+    padding: 15px 30px;
+    border-radius: 15px;
+    background: #ffffff;
+    color: #000000;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+button:hover{
+    transform: scale(1.05);
+    box-shadow: 0 10px 10px rgb(255, 238, 0);
+}
+
+.output-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.result-box{
+    height: 50px;
+    max-height: 100px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    padding: 15px;
+    font-size: 20px;
+    background: rgb(255, 255, 255, 0.5);
+}
+
+.tabs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.tabs button{
+    display: flex;
+    flex-direction: row;
+}
+
+.tablinks{
+    padding: 15px 30px;
+    border-radius: 15px;
+    background: #FFFACD;
+    color: #000000;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.tablinks.active{
+    transform: scale(1.05);
+    box-shadow: 0 10px 10px rgb(255, 238, 0);
+}
+
+.tabcontent{
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgb(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.tabcontent p{
+    font-size: 20px;
+    color: black;
+}
+
+.tabcontent h3{
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 50px;
+}
+
+@media (max-width: 600px){
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    textarea, input[type=number] {
+        max-width: 100%;
+    }
+}

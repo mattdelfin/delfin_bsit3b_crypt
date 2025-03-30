@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encryption/Decryption Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>encryption & decryption</h1>
+        </header>
+
+        <section class="input-section">
+            <label for="text" style="font-size: 25px;">enter message:</label>
+            <textarea id="text" rows="1"></textarea>
+
+            <label for="shift" style="font-size: 25px;">shift value (1-25):</label>
+            <input type="number" id="shift" min="1" max="25" value="3">
+
+            <div class="buttons">
+                <button onclick="encryptText()" style="font-size: 20px;">encrypt</button>
+                <button onclick="decryptText()" style="font-size: 20px;">decrypt</button>
+            </div>
+            
+        </section>
+
+        <section class="output-section">
+            <h3 style="font-size: 25px; font-weight:400;">encrypted text:</h3>
+            <div class="result-box">
+                <p id="encrypted-text" style="color: rgb(0, 0, 0);"></p>
+            </div>
+
+            <h3 style="font-size: 25px; font-weight:400;">decrypted text:</h3>
+            <div class="result-box">
+                <p id="decrypted-text" style="color: rgb(0, 0, 0);"></p>
+            </div>
+        </section>
+
+        <div class="tabs">
+            <p style="font-size: 25px;">learn more: </p>
+            <div class="buttons">
+                <button class="tablinks" onclick="openTab(event, 'Videos')" style="font-size: 20px;">videos</button>
+                <button class="tablinks" onclick="openTab(event, 'Discussion')" style="font-size: 20px;">discussion board</button>
+            </div>
+            
+            <div id="Videos" class="tabcontent">
+                <h3>videos on encryption/decryption</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/o_g-M7UBqI8?si=81TeaCUM25zf8-Fa" title="YouTube video player" frameborder="0"></iframe>
+            </div>
+
+            <div id="Discussion" class="tabcontent">
+                <h3 style="font-weight: bold;">Why is encryption important?</h3>
+                <p>Encryption protects data confidentiality by converting plaintext into ciphertext. This ensures only authorized parties can access sensitive information. (Source: NIST SP 800-53)</p>
+
+                <h3 style="font-weight: bold;">Can encryption be misused?</h3>
+                <p>Yes, malicious actors can use encryption to hide malware or conduct illegal activities. Example: Ransomware uses encryption to extort victims. (Source: FBI Cybersecurity Report)</p>
+
+                <h3 style="font-weight: bold;">Ethical Concerns</h3>
+                <p>1. Balancing privacy vs. security<br>
+                   2. Government backdoors vs. user trust<br>
+                   3. Access to encrypted data in criminal investigations</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
